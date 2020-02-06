@@ -1,0 +1,274 @@
+
+noscript div {
+    text-align: center;
+    margin: 30px;
+    padding: 10px;
+
+}
+
+.no-js-container {
+    position: relative;
+    text-align: center;
+    color: black;
+}
+
+.centered {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .centered p {
+    color: white;
+    border: 3px solid beige;
+    background-color: grey;
+    opacity: .8;
+    border-radius: 8px;
+    font-size: 2vw;
+    width: 90%;
+    padding: 10px;
+
+  }
+/* nav style */
+
+header nav {
+    opacity: .95;
+}
+
+nav a{
+    font-size: 25px;
+}
+
+#navbarNavAltMarkup a {
+    color: white;
+}
+
+#navbarNavAltMarkup a:hover {
+    font-weight: bold;
+}
+
+
+.nav-pills .nav-link {
+    border: 2px solid #292b2c;
+    color: #333333;
+    min-width: 8em;
+}
+
+.nav-pills .nav-link.active {
+    background-color:  black;
+    opacity: .7;
+}
+
+
+body {
+  background-image: url('../images/main-background.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Cinzel-Regular', sans-serif;
+
+}
+
+
+/* home style */
+
+.jumbotron {
+    margin-top: 40px;
+    opacity: .9;
+}
+
+.display-4 {
+    font-size: 5vw; text-align: center;
+}
+
+.description-container{
+ width: 35%;
+}
+
+.description h2 {
+    text-decoration: underline;
+    text-align: center;
+}
+
+
+.description {
+    background-color: #292b2c;
+    color: white;
+    padding: 20px;
+    line-height: 30px;
+    border-radius: 8px;
+    opacity: .9;
+    text-align: justify;
+}
+
+
+.carousel {
+    margin-top: 30px;
+    margin-bottom: 140px;
+}
+
+.carousel-caption {
+    font-size: 20px;
+    color: whitesmoke;
+    border: 3px solid beige;
+    background-color: grey;
+    opacity: .8;
+    border-radius: 8px;
+} 
+
+
+
+/* menu style */
+.menu {
+    background-color: whitesmoke;
+    margin-top: 40px;
+    margin-bottom: 190px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    opacity: .9;
+    
+}
+
+.menu h2{
+    text-decoration: underline;
+}
+
+#menu-description {
+    text-align: justify;
+    margin: auto;
+    width: 50%;
+    padding: 8px;
+    margin-bottom: 25px;
+}
+
+.menu-item {
+    padding: 10px;
+}
+
+
+.form-holder {
+    background-color: #292b2c;
+    padding: 20px;
+    opacity: .9;
+    margin-top: 60px !important;
+    margin-bottom: 200px !important;
+    margin: auto;
+    border-radius: 8px;
+    width: 80%;
+}
+
+
+form {
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    font-family: 'Rubik-Regular', sans-serif, serif;
+}
+
+form label {
+    color: white;
+}
+
+
+/* fonts */
+
+@font-face {
+    font-family: 'Cinzel-Regular';
+    src: url('../fonts/Cinzel-Regular.ttf');
+
+}
+
+@font-face {
+
+    font-family: 'Rubik-Regular';
+    src: url('../fonts/Rubik-Regular.ttf');
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    .description-container{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    
+    .display-4 {
+        font-size: 45px;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    
+    #menu-description {
+        width: 90%;
+    }
+
+    .centered {
+        width: 90%;
+        margin-left: 8px;
+    }
+
+    .centered p {
+        font-size: 3vw;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+
+    .form-holder {
+        width: 100%;
+    }
+    
+    form{
+        width: 100%;
+    }
+
+    
+}
+
+
+@media only screen and (max-width: 575px) {
+
+    .carousel {
+        margin-bottom: 225px;
+    }
+
+    .display-4 {
+        font-size: 30px;
+    }
+
+    
+}
+
+
+@media only screen and (max-width: 320px) {
+
+  #seasonal-menu{
+      font-size: 17px;
+  }
+    
+}
+
+@media only screen and (max-width: 350px) {
+
+    .main-title{
+        font-size: 30px;
+    }
+      
+  }
+
+@media only screen and (max-width: 320px) {
+
+    .centered{
+        top: 40%;
+    }
+  
+      
+  }

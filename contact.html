@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <!-- Font Awesome -->
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <!-- Added CSS -->
+      <link rel="stylesheet" href="styles/restaurantStyles.css">
+  
+    <title>Contact Us</title>
+  </head>
+  <body>
+
+    <header class="text-center">
+
+      <nav class="navbar navbar-expand-md nav-pills bg-dark navbar-dark container-fluid">
+        <div class="row m-0 w-100">
+            <!--  hamburger menu -->
+            <button type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler col-auto mr-auto">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="col-auto col-md-12">
+                <h1 style="color: white;" class="main-title">Full Plate</h1>
+            </div>
+
+            <!-- Navigation bar -->
+            <div id="navbarNavAltMarkup" class="collapse navbar-collapse col-md-12">
+                <div class="navbar-nav m-auto">
+                    <a class="nav-item nav-link" href="index.html"><i class="fa fa-home"></i></a>
+                    <a class="nav-item nav-link" href="menu.html" >Menu</a>
+                    <a class="nav-item nav-link active" href="#">Contact Us</a>
+                </div>
+            </div>
+
+      
+        </div>
+     </nav>
+    </header>
+
+
+    <noscript>
+      <div class="container no-js-container">
+        <img src="images/no-js-img.jpg" class="img-fluid" width="600px" alt="depressed robot">
+        <div class="centered"><p>This site needs JavaScript enabled to work right</p></div>
+      </div>
+    </noscript>
+
+
+
+    <!-- Note, if this were a real site I would have added 'required' to input fields and had email type as 'email' 
+          instead of text.  They were left out on purpose to illustrate javascript validation-->
+    <section>
+      <div class="container">
+        <div class="form-holder" id="form-holder" style="display: none;">
+
+          <h2 style="color: white; text-align: center; padding: 13px;">Contact Us</h2>
+
+          <form id="contact-form" onsubmit="return validateForm();">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="name" class="form-control" id="name" placeholder="name">
+              <small id="name-error" class="text-danger" style="display: none;">Name is required</small>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="text" class="form-control" id="email" placeholder="email"  >
+              <small id="email-error" class="text-danger" style="display: none;">Email is required</small>
+              <small id="invalid-email-error" class="text-danger" style="display: none;">Email is not valid</small>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" class="form-control" id="phone" placeholder="phone (xxx-xxx-xxxx)" > 
+              <small id="phone-error" class="text-danger" style="display: none;">Phone is required</small>
+              <small id="invalid-phone-error" class="text-danger" style="display: none;">Phone is not valid</small>
+            </div>
+
+            <label for="inquiry">Reason for inquiry</label>
+            <select class="browser-default custom-select form-control">
+              <option selected>Catering</option>
+              <option value="1">Private Party</option>
+              <option value="2">Feedback</option>
+              <option value="3">Other</option>
+            </select>
+
+            <br> <br>
+
+            <label for="additional-info">Additional Information</label>
+            <textarea class="form-control" name="textarea" id="additional-info" rows="4"></textarea>
+
+            <br>
+
+            <label>Have you been to the restaurant?</label>
+            <div class="row">
+              <div class="col-sm-12 col">
+                 <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                  <label class="form-check-label" for="inlineRadio1" checked>no</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                  <label class="form-check-label" for="inlineRadio2">yes</label>
+                </div>
+              </div>
+            </div>
+
+            <br>
+
+
+            <label>Best days to contact you</label>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="monday" value="monday" name="contact">
+                  <label class="form-check-label" for="inlineCheckbox1">M</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="tuesday" value="tuesday" name="contact">
+                  <label class="form-check-label" for="inlineCheckbox1">T</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="wednesday" value="wednesday" name="contact">
+                  <label class="form-check-label" for="inlineCheckbox1">W</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="thursday" value="thursday" name="contact">
+                  <label class="form-check-label" for="inlineCheckbox1">Th</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="friday" value="friday" name="contact"> 
+                  <label class="form-check-label" for="inlineCheckbox1">F</label>
+                </div>
+                <small id="contact-error" class="text-danger" style="display: none;">Please select at least one day</small>
+              </div>
+            </div>
+        
+            <br>
+
+            <button type="submit" class="btn btn-primary" >Send Request</button>
+        </form>
+
+        <div id="valid-form" style="margin-top: 30px; display: none;">
+          <h3 class="text-success text-center">Form is valid</h3>
+        </div>
+
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+    
+      <!-- MAIN FOOTER -->
+      <footer>
+        <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">            
+          <div class="container">
+            <div class="navbar-nav w-100">
+              <div class="navbar-text text-center col-12 col-sm-6 my-auto p-2" style="color: white;">
+                  <span>233 N Water St, Milwaukee, WI 53202</span>
+                  <br>
+                 <span>(414) 234-5465</span>
+              </div>
+              <div class="navbar-text text-center col-12 col-sm-6 my-auto p-2" style="color: white;">
+                <span>35970 S Howell Ave, Milwaukee, WI 53207</span>
+                  <br>
+                <span>(414) 483-3443</span>
+              </div>
+          </div>
+         
+          </div>
+        </nav>
+    
+      </footer>
+  
+  
+
+
+    <!-- Optional JavaScript -->
+    <script src="js/main.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
